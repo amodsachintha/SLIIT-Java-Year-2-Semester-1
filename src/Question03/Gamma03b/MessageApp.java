@@ -1,16 +1,16 @@
 package Question03.Gamma03b;
 
 // Receiver Class 1
-public class MessageApp {
-    public void readMessage(){
+class MessageApp {
+    void readMessage() {
         System.out.println("Inside " + this.getClass().getSimpleName() + ": readMessage()");
     }
 
-    public void readMessageList(){
+    void readMessageList() {
         System.out.println("Inside " + this.getClass().getSimpleName() + ": readMessageList()");
     }
 
-    public void sendMessage(){
+    void sendMessage() {
         System.out.println("Inside " + this.getClass().getSimpleName() + ": sendMessage()");
     }
 }

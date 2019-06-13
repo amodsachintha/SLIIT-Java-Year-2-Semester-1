@@ -3,7 +3,7 @@ package Question03.Gamma03b;
 public class SoftwarePackageOpen implements Command{
     private SoftwarePackage type;
 
-    public SoftwarePackageOpen(SoftwarePackage type) {
+    SoftwarePackageOpen(SoftwarePackage type) {
         this.type = type;
     }
 

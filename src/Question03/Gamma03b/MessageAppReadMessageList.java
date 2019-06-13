@@ -4,7 +4,7 @@ public class MessageAppReadMessageList implements Command {
 
     private MessageApp type;
 
-    public MessageAppReadMessageList(MessageApp type) {
+    MessageAppReadMessageList(MessageApp type) {
         this.type = type;
     }
 

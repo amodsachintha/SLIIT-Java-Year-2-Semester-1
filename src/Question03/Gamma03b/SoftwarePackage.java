@@ -1,18 +1,18 @@
 package Question03.Gamma03b;
 
-public class SoftwarePackage {
+class SoftwarePackage {
 
     private String name;
 
-    public SoftwarePackage(String name) {
+    SoftwarePackage(String name) {
         this.name = name;
     }
 
-    public void open() {
+    void open() {
         System.out.println("Inside " + this.getClass().getSimpleName() + "(" + this.name + "): open()");
     }
 
-    public void close() {
+    void close() {
         System.out.println("Inside " + this.getClass().getSimpleName() + "(" + this.name + "): close()");
     }
 }
