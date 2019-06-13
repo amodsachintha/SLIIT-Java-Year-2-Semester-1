@@ -4,9 +4,8 @@ public class MainThreadApp {
 
     public static void main(String[] args) {
         Calculation calculation = new Calculation();
-
-        ParallelThread p1 = new ParallelThread(calculation, 0, 1, 4);
-        ParallelThread p2 = new ParallelThread(calculation, 0, 5, 8);
+        ParallelThread p1 = new ParallelThread(calculation, 7, 1, 10);
+        ParallelThread p2 = new ParallelThread(calculation, 7, 11, 20);
 
         p1.start();
         p2.start();
@@ -41,25 +40,21 @@ class ParallelThread extends Thread {
         synchronized (calculation) {
             calculation.computePowerProduct(this.no, this.start, this.end);
         }
-
-
     }
 }
 
 
 class Calculation {
     private double powerProduct;
-    private static double sum = 0;
 
     double getSum() {
-        return sum;
+        return powerProduct;
     }
 
     void computePowerProduct(int exp, int start, int end) {
         for (int i = start; i <= end; i++) {
             this.powerProduct += pow(i, exp);
         }
-        sum += this.powerProduct;
     }
 
     private double pow(int a, int b) {
